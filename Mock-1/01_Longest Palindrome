@@ -1,0 +1,40 @@
+#Array/List
+def palindrome(s):
+    freq=[0]*256
+    for ch in s:
+        freq[ord(ch)]+=1
+    length=0
+    odd=False
+    for i in range(256):
+        if freq[i]%2==0:
+            length+=freq[i]
+        else:
+            length+=freq[i]-1
+            odd=True  
+    if odd:
+        length+=1
+    print(f"The length--->{length}")
+
+palindrome("AaabbB")     
+
+#MAP/DICT
+def palindrome(s):
+    freq={}
+    for ch in s:
+        freq[ch]=freq.get(ch,0)+1
+    length=0
+    odd=False
+    for ch in freq:
+        if(freq[ch]%2==0):
+            length+=freq[ch]
+        else:
+            length+=freq[ch]-1
+            odd=True
+    if(odd):
+        length+=1
+    print(f"LONGEST PALINDROME LENGTH---> {length}")
+s=input("enter the string:" )
+palindrome(s)        
+
+
+

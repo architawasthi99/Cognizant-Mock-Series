@@ -1,0 +1,7 @@
+def sum(arr):
+  result=0
+  for i in range(len(arr)):
+    result=result+arr[i]
+  return result
+arr=[10,20,30,40,50,60]
+print(sum(arr))

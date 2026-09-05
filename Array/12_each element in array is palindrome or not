@@ -1,0 +1,7 @@
+def palindrome(arr):
+  for word in arr:
+    if word!=word[::-1]:
+      return False
+  return True    
+arr = ["madam", "level", "radar"]
+print(palindrome(arr))
